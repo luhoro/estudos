@@ -1,0 +1,90 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+ul {
+   list-style: none;
+}
+
+body {
+   background-color: rgb(255, 255, 255);
+   font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 60px;
+   background-color: rgb(49, 69, 122);
+   box-shadow: 0 0 10px black;
+   padding: 0 30px;
+}
+
+.logo {
+   color: white;
+   letter-spacing: -2px;
+   text-transform: lowercase;
+   text-shadow: 0 0 20px black;
+}
+
+.logo span:first-child {
+   color: rgb(110, 135, 199);
+}
+
+.logo span:last-child {
+   font-size: 20px;
+   letter-spacing: normal;
+}
+
+.menu {
+   display: flex;
+   text-decoration: none;
+}
+
+.menu > li {
+   position: relative;
+}
+
+.menu > li a {
+   padding: 20.5px;
+   color: white;
+   text-decoration: none;
+   font-size: 14px;
+   display: block;
+}
+
+.menu > li:hover {
+   background-color: rgb(110, 135, 199);
+   text-shadow: 0 0 10px black;
+}
+
+.menu > li:hover > .submenu, .submenu > li:hover > .submenu  {
+   display: block;
+}
+
+
+.submenu {
+   display: none;
+   position: absolute;
+   top: 60px;
+   left: 0;
+   background: rgb(110, 135, 199);
+   min-width: 110%;
+}
+
+.submenu li:hover {
+   background: rgb(156, 176, 226);
+}
+
+.submenu li {
+   position: relative;
+}
+
+.submenu li .submenu {
+   top: 0;
+   left: 100%;
+}
