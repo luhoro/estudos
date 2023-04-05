@@ -122,4 +122,90 @@ nav ul li a:hover {
 #cupom .texto h2 {
   margin: 2rem;
   font-size: 1.7647058824rem;
+}
+#cupom .input {
+  margin: 0 auto;
+  width: 575px;
+  border-radius: 20px;
+  border: 4px solid white;
+  background-color: white;
+}
+#cupom .input input {
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  width: 540px;
+  outline: none;
+  text-align: center;
+  font-size: 26px;
+}
+#cupom .input:hover, #cupom .input:focus-within {
+  box-shadow: 1px 1px 8px 1px #85a592;
+  outline: none;
+}
+#cupom button {
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  background-color: #85a592;
+  color: white;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+  border: 2px solid #85a592;
+  border-radius: 40px;
+  transition: color, background-color 200ms ease;
+}
+#cupom button:hover {
+  color: #85a592;
+  background-color: white;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.5rem;
+  border-top: 2px solid #85a592;
+  margin-top: 3rem;
+  padding: 1.2rem;
+  background: linear-gradient(to right, #85a592, #CCD5AE, #FAEDCD, #FAEDCD);
+}
+footer i {
+  color: red;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+#curiosidades {
+  padding: 1rem;
+  text-align: center;
+  margin: 5px;
+}
+#curiosidades img {
+  width: 400px;
+}
+#curiosidades h3 {
+  color: #85a592;
+  font-size: 1.2rem;
+  padding-bottom: 12px;
+}
+#curiosidades h4 {
+  color: #CCD5AE;
+  font-size: 1rem;
+  padding-bottom: 8px;
+}
+#curiosidades p {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 5px;
+  color: #85a592;
 }/*# sourceMappingURL=style.css.map */
