@@ -1,9 +1,13 @@
 
 const Main = {
 
+   tasks: [],
+
    init: function (){
       this.cacheSelectors()
       this.bindEvents()
+      this.getStoraged()
+      this.buildTasks()
    },
 
    cacheSelectors: function (){
@@ -27,10 +31,33 @@ const Main = {
       })
    },
 
+   getStoraged: function () {
+      const tasks = localStorage.getItem('tasks')
+
+      this.tasks = JSON.parse(tasks)
+   },
+
+   buildTasks: function () {
+      let html = ''
+      this.tasks.forEach( item => {
+         html += `
+            <li >
+               <div class="check"></div>
+               <label for="" class="task">
+                  ${item.task}
+               </label>
+               <button class="remove"></button>
+            </li>
+         `
+      })
+
+      this.$list.innerHTML = html
+   },
+
 
 
    Events: {
-      checkButton_click: function(e){
+      checkButton_click: e => {
          const li = e.target.parentElement
          const isDone = li.classList.contains('done')
 
@@ -41,7 +68,7 @@ const Main = {
          li.classList.remove('done')
       },
 
-      inputTask_keypress: function(e){
+      inputTask_keypress: e => {
          const key = e.key
          const value = e.target.value
 
@@ -60,10 +87,18 @@ const Main = {
 
             this.cacheSelectors()
             this.bindEvents()
+
+            const savedTasks = localStorage.getItem('tasks')
+
+            const object = [{
+               task: value
+            }]
+
+            localStorage.setItem('tasks', JSON.stringify(object))
          }
       },
 
-      removeButton_click: function(e){
+      removeButton_click: e => {
          let li = e.target.parentElement
 
          li.classList.add('removed')
