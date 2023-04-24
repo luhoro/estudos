@@ -3,9 +3,8 @@ const endpointDaAPI = 'https://guilhermeonrails.github.io/casadocodigo/livros.js
 getBuscarLivrosDaAPI()
 
 async function getBuscarLivrosDaAPI() {
-   const answer = await fetch(endpointDaAPI)
-   livros = await answer.json()
-   let livrosComDesconto = aplicarDesconto(livros)
-   exibirOsLivrosNaTela(livros)
+    const res = await fetch(endpointDaAPI)
+    livros = await res.json()
+    livros = aplicarDesconto(livros)
+    exibirOsLivrosNaTela(livrosComDesconto)
 }
-
