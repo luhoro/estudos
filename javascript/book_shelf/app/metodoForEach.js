@@ -1,7 +1,10 @@
 const elementoParaInserirLivros = document.getElementById('livros')
+const elementoComValorTotalDeLivrosDisponiveis = document.getElementById('valor_total_livros_disponiveis')
 
 function exibirOsLivrosNaTela(listaDeLivros) {
+    elementoComValorTotalDeLivrosDisponiveis.innerHTML = ''
     elementoParaInserirLivros.innerHTML = ''
+
     listaDeLivros.forEach(livro => {
         // let disponibilidade = verificarDisponibilidadeDoLivro(livro)
         let disponibilidade = livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel' 
@@ -20,6 +23,7 @@ function exibirOsLivrosNaTela(listaDeLivros) {
       </div>
         `
     })
+
 }
 
 // function verificarDisponibilidadeDoLivro(livro) {
@@ -29,3 +33,4 @@ function exibirOsLivrosNaTela(listaDeLivros) {
 //     return 'livros__imagens indisponivel'
 //   }
 // }
+
