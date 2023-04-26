@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>desafio2</title>
+</head>
+<body>
+   <script>
+
+      const aluno = {
+         nome: 'Maria',
+         sobrenome: 'da Silva',
+         notas: [7, 10, 8, 5, 7, 9],
+      }
+
+      let bimestres = aluno.notas.length
+      let somaNota = aluno.notas.reduce((acc, cur) => acc + cur)
+      let notaMedia = Math.round(somaNota / bimestres).toFixed(2)
+
+      let frase = `A média da Maria foi ${notaMedia} para o total de ${bimestres} bimestres.`
+      console.log(frase)
+
+   </script>
+</body>
+</html>
