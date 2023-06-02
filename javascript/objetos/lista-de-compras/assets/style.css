@@ -1,0 +1,47 @@
+html {
+	background: rgb(195, 180, 207);
+	background: linear-gradient(
+		155deg,
+		rgba(195, 180, 207, 1) 0%,
+		rgb(221, 233, 236) 50%,
+		rgba(223, 182, 222, 1) 100%
+	);
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+body {
+	font-family: "Montserrat", "sans-serif", "Mansalva", cursive;
+}
+
+h2,
+footer {
+	font-family: "Mansalva";
+}
+
+.input {
+	border-radius: 16px;
+}
+
+.input::placeholder {
+	color: rgb(170, 177, 120);
+}
+
+.button {
+	border: none;
+	border-radius: 16px;
+}
+
+.itens-comprados {
+	text-decoration: line-through;
+}
+
+.borda-lista {
+	border-bottom: dashed 2px blue;
+}
+
+input:disabled {
+	border: none;
+	background: none;
+	color: black;
+}
